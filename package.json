@@ -1,0 +1,21 @@
+{
+  "name": "react-reality-template-holokit",
+  "version": "1.0.0",
+  "description": "Holokit demo template for react-reality",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://rhdeck/react-reality-template-holokit"
+  },
+  "keywords": [
+    "react-reality",
+    "react-native",
+    "ar",
+    "template"
+  ],
+  "author": "Ray Deck",
+  "license": "MIT"
+}
