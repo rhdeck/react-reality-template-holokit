@@ -9,5 +9,6 @@
   "react-native-zip-archive": "^2.2.5",
   "react-reality": "rhdeck/react-reality",
   "react-reality-holokit": "rhdeck/react-reality-holokit",
-  "react-native-ios-setfamily": "*"
+  "react-native-ios-setfamily": "*",
+  "react-native-device-info": "*"
 }

@@ -1,40 +1,20 @@
 import React, { Component, Children } from "react";
 import {
-  AppRegistry,
-  View,
-  Text,
-  processColor,
-  NativeModules,
-  TextInput,
-  Button,
-  Image
-} from "react-native";
-import {
-  ARTouchableMonoView,
   ARPlane,
   ARNode,
   ARBox,
-  ARMaterial,
   ARMaterials,
   ARMaterialProperty,
-  ARText,
-  ARSphere,
   ARSKScene,
   ARSKLabel,
-  ARPrimeBaseNode,
-  ARMonoView,
   ARSessionProvider,
   ARAnimatedProvider,
-  ARTrackingConsumer,
   ARTrackingProvider,
-  ARPositionProvider,
-  ARScene,
-  ARModel,
-  ARShape
+  ARPositionProvider
 } from "react-reality";
 import * as RNFS from "react-native-fs";
 import { unzip } from "react-native-zip-archive";
-
+import { ARDualView } from "react-reality-holokit";
 const getImage = async (sourceFile, URL) => {
   const path = RNFS.DocumentDirectoryPath + "/" + sourceFile;
   if (await RNFS.exists(path)) {
@@ -62,7 +42,6 @@ const getFolder = async (sourcePath, URL) => {
   console.log("Got files from ", zipPath, files);
   return path;
 };
-
 
 class artestHoloKit extends Component {
   state = {
@@ -182,7 +161,7 @@ class artestHoloKit extends Component {
                                         <ARMaterials>
                                           <ARMaterialProperty
                                             id="diffuse"
-                                            color={processColor(
+                                            color={
                                               this.state.colors &&
                                               this.state.colors[
                                                 "node-" + i.toString()
@@ -191,7 +170,7 @@ class artestHoloKit extends Component {
                                                     "node-" + i.toString()
                                                   ]
                                                 : "#0000FF"
-                                            )}
+                                            }
                                           />
                                         </ARMaterials>
                                       </ARBox>
@@ -207,19 +186,13 @@ class artestHoloKit extends Component {
                         length={0.1}
                       >
                         <ARMaterials>
-                          <ARMaterialProperty
-                            id="diffuse"
-                            color={processColor("green")}
-                          >
+                          <ARMaterialProperty id="diffuse" color={"green"}>
                             <ARSKScene
                               width={v.plane.height * 2000}
                               height={v.plane.width * 2000}
-                              color={processColor("#FFFF00")}
+                              color={"#FFFF00"}
                             >
-                              <ARSKLabel
-                                text={v.name}
-                                fontColor={processColor("black")}
-                              />
+                              <ARSKLabel text={v.name} fontColor={"black"} />
                             </ARSKScene>
                           </ARMaterialProperty>
                         </ARMaterials>
