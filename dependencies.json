@@ -1,14 +1,3 @@
 {
-  "react-native-bundlebase": "^1.1.0",
-  "react-native-camera-ios-enable": "^1.1.0",
-  "react-native-fix-ios-version": "^1.5.3",
-  "react-native-fs": "^2.9.12",
-  "react-native-pod": "^1.10.1",
-  "react-native-setdevteam": "^1.2.0",
-  "react-native-swift": "^1.2.1",
-  "react-native-zip-archive": "^2.2.5",
-  "react-reality": "rhdeck/react-reality",
-  "react-reality-holokit": "rhdeck/react-reality-holokit",
-  "react-native-ios-setfamily": "*",
-  "react-native-device-info": "*"
+  "react-reality-holokit": "rhdeck/react-reality-holokit"
 }
